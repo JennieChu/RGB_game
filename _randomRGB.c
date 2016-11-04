@@ -12,25 +12,24 @@
  * Return: value
  */
 
-int *_rgbGenerator(int *color);
+char *_rgbGenerator();
 
 int main(void)
 {
-	int num[2], i;
+	char s[10];
+	char *color;
 
-	num[0] = num[1] = num[2] = 0;
 	srand(time(NULL));
-	_rgbGenerator(num);
-	for (i = 0; i < 3; i++)
-		printf("%d\n", num[i]);
+	color = _rgbGenerator(s);
+	printf("%s\n", color);
 	return (0);
 }
 
-int *_rgbGenerator(int *color)
+char *_rgbGenerator(char *s)
 {
-	/** Randomly generate 3 number 1 - 255 in hex*/
-	color[0] = rand() % 255;
-	color[1] = rand() % 255;
-	color[2] = rand() % 255;
-	return (color);
+	int r = rand() % 255;
+	int g = rand() % 255;
+	int b = rand() % 255;
+	sprintf(s, "%d %d %d", r, g, b);
+	return (s);
 }

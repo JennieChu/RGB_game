@@ -27,9 +27,7 @@ int main(void)
 
 char *_rgbGenerator(char *s)
 {
-	int r = rand() % 255;
-	int g = rand() % 255;
-	int b = rand() % 255;
-	sprintf(s, "%d %d %d", r, g, b);
+	sprintf(s, "%02x%02x%02x", rand() % 255,
+		rand() % 255, rand() % 255);
 	return (s);
 }

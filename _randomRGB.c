@@ -45,7 +45,7 @@ int main(void)
 
 unsigned char *_rgbGenerator(unsigned char *c, int *r, int *g, int *b)
 {
-	sprintf(c, "%d%d%d", *r, *g, *b);
+	sprintf(c, "%02x%02x%02x", *r, *g, *b);
 	return (c);
 }
 
@@ -64,6 +64,6 @@ unsigned char *_swatchGenerator(unsigned char *swatch, int *r, int *g, int *b)
 		*temp_g = *temp_g +  10;
 	else
 		*temp_b = *temp_b +  10;
-	sprintf(swatch, "%d%d%d", *temp_r,  *temp_g, *temp_b);
+	sprintf(swatch, "%02x%02x%02x", *temp_r,  *temp_g, *temp_b);
 	return (swatch);
 }

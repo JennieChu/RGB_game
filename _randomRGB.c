@@ -25,9 +25,9 @@ int main(void)
 	int r_val, g_val, b_val;
 
 	srand(time(NULL));
-	r_val = rand() % 255;
-	g_val = rand() % 255;
-	b_val = rand() % 255;
+	r_val = rand() % 235;
+	g_val = rand() % 235;
+	b_val = rand() % 235;
 	r = &r_val;
 	g = &g_val;
 	b = &b_val;

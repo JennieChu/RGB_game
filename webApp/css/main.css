@@ -1,15 +1,33 @@
-// Main Swatch
-
-.main_swatch
+.main
 {
-		width: 500px;
-		height:100px;
-		background: yellow;
-
+  padding: 20px;
 }
 
-// General Formatting
 
+.main_container
+{
+    margin: 0 auto;
+		height: 300px;
+		width: 300px;
+		background: yellow;
+}
+
+.choose_swatch
+{
+  width: 70%;
+  margin: 10px auto;
+  position: relative;
+  text-align: center;
+}
+
+.swatch
+{
+  width: 200px;
+  height: 200px;
+  background: yellow;
+  display: inline-block;
+  margin: 10px;
+}
 html, body
 {
 margin: 0;

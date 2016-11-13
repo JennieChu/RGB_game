@@ -2,16 +2,13 @@
 {
   padding: 20px;
 }
-
-
 .main_container
 {
     margin: 0 auto;
 		height: 300px;
 		width: 300px;
-		background: yellow;
+		background: #100d95;
 }
-
 .choose_swatch
 {
   width: 70%;
@@ -19,7 +16,6 @@
   position: relative;
   text-align: center;
 }
-
 .swatch
 {
   width: 200px;
@@ -27,6 +23,22 @@
   background: yellow;
   display: inline-block;
   margin: 10px;
+}
+#first
+{
+  background: #100d95;
+}
+#second
+{
+  background: #1a0d95;
+}
+#third
+{
+  background: #1a1795;
+}
+#fourth
+{
+  background: #241795;
 }
 html, body
 {

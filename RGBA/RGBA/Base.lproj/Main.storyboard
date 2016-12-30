@@ -78,6 +78,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Q9o-Ae-K9s"/>
+                    <connections>
+                        <outlet property="colorOne" destination="oGw-rx-tzS" id="bUo-cj-5Nx"/>
+                        <outlet property="colorThree" destination="TlX-to-YkZ" id="usE-ig-aeC"/>
+                        <outlet property="colorTwo" destination="vcT-sD-HZj" id="3Fz-kS-6QU"/>
+                        <outlet property="ogColor" destination="62L-7u-9Vi" id="8jW-NK-n0q"/>
+                        <outlet property="scoreCount" destination="gwe-Jn-VVT" id="5Rb-3p-865"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

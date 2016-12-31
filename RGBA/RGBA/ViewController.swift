@@ -22,13 +22,26 @@ class ViewController: UIViewController {
     {
         super.viewDidLoad()
         // get random RGB values
-        let color1 = 0.5
-        // set colors
-        ogColor.backgroundColor = UIColor(red: CGFloat(color1), green: 0.6, blue: 0.2, alpha: 1.0)
-        colorOne.layer.backgroundColor = UIColor.brown.cgColor
-        colorTwo.layer.backgroundColor = UIColor.cyan.cgColor
-        colorThree.layer.backgroundColor = UIColor.darkGray.cgColor
+
+        // set colors by: red: CGFloat(variable name)
+        let mainColor : UIColor = getRandomColor()
+        ogColor.backgroundColor = mainColor
+        colorOne.layer.backgroundColor = UIColor(red:0.5, green: 0.62, blue: 0.2, alpha: 1.0).cgColor
+        colorTwo.layer.backgroundColor = UIColor(red:0.5, green: 0.63, blue: 0.2, alpha: 1.0).cgColor
+        colorThree.layer.backgroundColor = UIColor(red:0.5, green: 0.6, blue: 0.2, alpha: 1.0).cgColor
+        //nextCompare() - gets the next set of color blocks
+        
     }
+    
+    func getRandomColor() -> UIColor
+    {
+        let red : CGFloat = CGFloat(arc4random()) / CGFloat(UInt32.max)
+        let blue : CGFloat = CGFloat(arc4random()) / CGFloat(UInt32.max)
+        let green : CGFloat = CGFloat(arc4random()) / CGFloat(UInt32.max)
+        
+        return UIColor(red: red, green: green, blue: blue, alpha: 1.0)
+    }
+    
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()

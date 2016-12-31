@@ -15,6 +15,7 @@
 		B31D39A41E15E24A0046546E /* RGBATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31D39A31E15E24A0046546E /* RGBATests.swift */; };
 		B31D39AF1E15E24A0046546E /* RGBAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31D39AE1E15E24A0046546E /* RGBAUITests.swift */; };
 		B31D39BD1E174ABB0046546E /* UIColor+getSimilarColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31D39BC1E174ABB0046546E /* UIColor+getSimilarColor.swift */; };
+		B31D39BF1E184E270046546E /* helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31D39BE1E184E270046546E /* helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		B31D39AE1E15E24A0046546E /* RGBAUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RGBAUITests.swift; sourceTree = "<group>"; };
 		B31D39B01E15E24A0046546E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B31D39BC1E174ABB0046546E /* UIColor+getSimilarColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+getSimilarColor.swift"; sourceTree = "<group>"; };
+		B31D39BE1E184E270046546E /* helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				B31D398E1E15E24A0046546E /* AppDelegate.swift */,
 				B31D39901E15E24A0046546E /* ViewController.swift */,
+				B31D39BE1E184E270046546E /* helper.swift */,
 				B31D39BC1E174ABB0046546E /* UIColor+getSimilarColor.swift */,
 				B31D39921E15E24A0046546E /* Main.storyboard */,
 				B31D39951E15E24A0046546E /* Assets.xcassets */,
@@ -265,6 +268,7 @@
 				B31D39911E15E24A0046546E /* ViewController.swift in Sources */,
 				B31D39BD1E174ABB0046546E /* UIColor+getSimilarColor.swift in Sources */,
 				B31D398F1E15E24A0046546E /* AppDelegate.swift in Sources */,
+				B31D39BF1E184E270046546E /* helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

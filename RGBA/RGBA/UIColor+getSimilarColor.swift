@@ -21,6 +21,7 @@ extension UIColor
         var rnum = 0
         
         self.getRed(&fRed, green: &fGreen, blue: &fBlue, alpha: &fAlpha)
+        // print("Before change: fRed is \(fRed), fGreen is \(fGreen), fBlue is \(fBlue)")
         rnum = GKRandomSource.sharedRandom().nextInt(upperBound: 3)
         if rnum == 0
         {
@@ -55,6 +56,7 @@ extension UIColor
                 fBlue += 0.02
             }
         }
+        // print("After change: fRed is \(fRed), fGreen is \(fGreen), fBlue is \(fBlue)")
         return UIColor(red: fRed, green: fGreen, blue: fBlue, alpha: fAlpha)
     }
 }

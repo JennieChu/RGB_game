@@ -10,30 +10,71 @@
 import UIKit
 import GameplayKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController
+{
     @IBOutlet weak var ogColor: UILabel!
     @IBOutlet weak var colorOne: UIButton!
     @IBOutlet weak var colorTwo: UIButton!
     @IBOutlet weak var colorThree: UIButton!
     @IBOutlet weak var scoreCount: UILabel!
-    var guesses = [String]()
-    var score = 0
+    var colorsToChoose = [UIColor]()
+    var score: Int = 0
+    {
+        didSet
+        {
+            scoreCount.text = "Score: \(score)"
+        }
+    }
+    var correctAnswer = 0
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        // get random RGB values
-
-        // set colors by: red: CGFloat(variable name)
-        let mainColor : UIColor = getRandomColor()
-        ogColor.backgroundColor = mainColor
-        let simColorOne : UIColor = mainColor.getSimilarColor()
-        var simColorTwo : UIColor = mainColor.getSimilarColor()
-        colorOne.layer.backgroundColor = simColorOne.cgColor
-        colorTwo.layer.backgroundColor = simColorTwo.cgColor
-        colorThree.layer.backgroundColor = UIColor(red:0.5, green: 0.6, blue: 0.2, alpha: 1.0).cgColor
-        //nextCompare() - gets the next set of color blocks
+        score = 0
         
+        colorOne.layer.shadowColor = UIColor.black.cgColor
+        colorOne.layer.shadowOffset = CGSize(width: 5, height: 5)
+        colorOne.layer.shadowRadius = 5
+        colorOne.layer.shadowOpacity = 0.2
+        colorOne.layer.cornerRadius = 5
+        colorOne.layer.masksToBounds = true
+        
+        colorTwo.layer.shadowColor = UIColor.black.cgColor
+        colorTwo.layer.shadowOffset = CGSize(width: 5, height: 5)
+        colorTwo.layer.shadowRadius = 5
+        colorTwo.layer.shadowOpacity = 0.2
+        colorTwo.layer.cornerRadius = 5
+        colorTwo.layer.masksToBounds = true
+        
+        colorThree.layer.shadowColor = UIColor.black.cgColor
+        colorThree.layer.shadowOffset = CGSize(width: 5, height: 5)
+        colorThree.layer.shadowRadius = 5
+        colorThree.layer.shadowOpacity = 0.2
+        colorThree.layer.cornerRadius = 5
+        colorThree.layer.masksToBounds = true
+        
+        
+        nextRound(action: nil)
+    }
+    
+    func nextRound(action: UIAlertAction!)
+    {
+        let mainColor: UIColor = getRandomColor()
+        let simColorOne: UIColor = mainColor.getSimilarColor()
+        let simColorTwo: UIColor = mainColor.getSimilarColor()
+
+
+        colorsToChoose += [simColorOne, simColorTwo, mainColor]
+        colorsToChoose = GKRandomSource.sharedRandom().arrayByShufflingObjects(in: colorsToChoose) as! [UIColor]
+        
+        colorOne.layer.backgroundColor = colorsToChoose[0].cgColor
+        colorTwo.layer.backgroundColor = colorsToChoose[1].cgColor
+        colorThree.layer.backgroundColor = colorsToChoose[2].cgColor
+        
+
+        
+        correctAnswer = GKRandomSource.sharedRandom().nextInt(upperBound: 3)
+        ogColor.backgroundColor = colorsToChoose[correctAnswer]
     }
     
     func getRandomColor() -> UIColor
@@ -44,6 +85,30 @@ class ViewController: UIViewController {
         
         return UIColor(red: red, green: green, blue: blue, alpha: 1.0)
     }
+
+    @IBAction func buttonTapped(_ sender: UIButton)
+    {
+        if sender.tag == correctAnswer
+        {
+            // title = "Correct"
+            title = "Correct!"
+            colorsToChoose.removeAll()
+            nextRound(action: nil)
+            score += 1
+        }
+        else
+        {
+            title = ""
+            let ac = UIAlertController(title: "Game Over", message: "Your score was \(score)", preferredStyle: .alert)
+            ac.addAction(UIAlertAction(title: "Play Again", style: .default, handler: nextRound))
+            present(ac, animated: true)
+            score = 0
+        }
+        colorsToChoose.removeAll()
+
+    }
+    
+
     
     override func didReceiveMemoryWarning()
     {

@@ -8,6 +8,7 @@
 //
 
 import UIKit
+import GameplayKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var ogColor: UILabel!
@@ -26,8 +27,10 @@ class ViewController: UIViewController {
         // set colors by: red: CGFloat(variable name)
         let mainColor : UIColor = getRandomColor()
         ogColor.backgroundColor = mainColor
-        colorOne.layer.backgroundColor = UIColor(red:0.5, green: 0.62, blue: 0.2, alpha: 1.0).cgColor
-        colorTwo.layer.backgroundColor = UIColor(red:0.5, green: 0.63, blue: 0.2, alpha: 1.0).cgColor
+        let simColorOne : UIColor = mainColor.getSimilarColor()
+        var simColorTwo : UIColor = mainColor.getSimilarColor()
+        colorOne.layer.backgroundColor = simColorOne.cgColor
+        colorTwo.layer.backgroundColor = simColorTwo.cgColor
         colorThree.layer.backgroundColor = UIColor(red:0.5, green: 0.6, blue: 0.2, alpha: 1.0).cgColor
         //nextCompare() - gets the next set of color blocks
         

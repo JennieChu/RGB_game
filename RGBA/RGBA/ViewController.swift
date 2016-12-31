@@ -32,26 +32,29 @@ class ViewController: UIViewController
         super.viewDidLoad()
         score = 0
         
+        ogColor.layer.cornerRadius = 5
+        ogColor.layer.masksToBounds = true
+        
         colorOne.layer.shadowColor = UIColor.black.cgColor
         colorOne.layer.shadowOffset = CGSize(width: 5, height: 5)
         colorOne.layer.shadowRadius = 5
         colorOne.layer.shadowOpacity = 0.2
         colorOne.layer.cornerRadius = 5
-        colorOne.layer.masksToBounds = true
+        colorOne.layer.masksToBounds = false
         
         colorTwo.layer.shadowColor = UIColor.black.cgColor
         colorTwo.layer.shadowOffset = CGSize(width: 5, height: 5)
         colorTwo.layer.shadowRadius = 5
         colorTwo.layer.shadowOpacity = 0.2
         colorTwo.layer.cornerRadius = 5
-        colorTwo.layer.masksToBounds = true
+        colorTwo.layer.masksToBounds = false
         
         colorThree.layer.shadowColor = UIColor.black.cgColor
         colorThree.layer.shadowOffset = CGSize(width: 5, height: 5)
         colorThree.layer.shadowRadius = 5
         colorThree.layer.shadowOpacity = 0.2
         colorThree.layer.cornerRadius = 5
-        colorThree.layer.masksToBounds = true
+        colorThree.layer.masksToBounds = false
         
         
         nextRound(action: nil)

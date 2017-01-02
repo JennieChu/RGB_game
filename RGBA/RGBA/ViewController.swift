@@ -18,8 +18,8 @@ class ViewController: UIViewController
     @IBOutlet weak var colorThree: UIButton!
     @IBOutlet weak var scoreCount: UILabel!
 
-    var correctAnswer = 0
     var colorsToChoose = [UIColor]()
+    var correctAnswer = 0
     var score: Int = 0
     {
         didSet
@@ -28,8 +28,6 @@ class ViewController: UIViewController
         }
     }
 
-    // viewDidLoad - initial setup after view loads
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -38,6 +36,9 @@ class ViewController: UIViewController
         nextRound(action: nil)
     }
     
+    /// initializes the next round to play, gets another color and 2 similar colors
+    ///
+    /// - Parameter action: action for when game is over, an alert is sent to user
     func nextRound(action: UIAlertAction!)
     {
         let mainColor: UIColor = getRandomColor()
@@ -56,6 +57,9 @@ class ViewController: UIViewController
         ogColor.backgroundColor = colorsToChoose[correctAnswer]
     }
 
+    /// checks whether the user chose the correct answer, if wrong, initializes Game Over sequence
+    ///
+    /// - Parameter sender: the button the user tapped
     @IBAction func buttonTapped(_ sender: UIButton)
     {
         if sender.tag == correctAnswer
@@ -68,18 +72,24 @@ class ViewController: UIViewController
         else
         {
             title = ""
-            // create an alert to notify game over
             let ac = UIAlertController(title: "Game Over", message: "Your score was \(score)", preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "Play Again", style: .default, handler: nextRound))
             present(ac, animated: true)
             endGame()
         }
         colorsToChoose.removeAll()
-
     }
     
+    
+    /// Game Over sequence: resets score and update highscore if necessary
     func endGame()
     {
+        let defaults = UserDefaults.standard
+        let highScore = defaults.integer(forKey: "highScore")
+        if score > highScore
+        {
+            defaults.set(self.score, forKey: "highScore")
+        }
         score = 0;
     }
     

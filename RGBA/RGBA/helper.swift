@@ -9,9 +9,10 @@
 import Foundation
 import UIKit
 
-// getRandomColor - gets a random RGB color
-// Returns: a UIColor with the randomize RGB Values, alpha is always set to one
 
+/// gets a random RGB color
+///
+/// - Returns: a UIColor with the randomize RGB values, alpha is always set to one
 func getRandomColor() -> UIColor
 {
     let red : CGFloat = CGFloat(arc4random()) / CGFloat(UInt32.max)
@@ -21,12 +22,14 @@ func getRandomColor() -> UIColor
     return UIColor(red: red, green: green, blue: blue, alpha: 1.0)
 }
 
-// modifyButtonDesign - modifies the display of all buttons and labels
-// @ogColor: original color to match with
-// @colorOne: first button option
-// @colorTwo: second button option
-// @colorThree: third button option
 
+/// modifies the display of all buttons and labels
+///
+/// - Parameters:
+///   - ogColor: original color to match with
+///   - colorOne: first button
+///   - colorTwo: second button
+///   - colorThree: third button
 func modifyButtonDesign(_ ogColor: UILabel?, _ colorOne: UIButton?, _ colorTwo: UIButton?, _ colorThree: UIButton?)
 {
     ogColor!.layer.cornerRadius = 5

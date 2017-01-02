@@ -17,7 +17,10 @@ class ViewController: UIViewController
     @IBOutlet weak var colorTwo: UIButton!
     @IBOutlet weak var colorThree: UIButton!
     @IBOutlet weak var scoreCount: UILabel!
+    @IBOutlet weak var infoButton: UIBarButtonItem!
+    @IBOutlet weak var buttonInfo: UILabel!
 
+    var isHidden = false
     var colorsToChoose = [UIColor]()
     var correctAnswer = 0
     var score: Int = 0
@@ -31,6 +34,7 @@ class ViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        buttonInfo.isHidden = true
         score = 0
         modifyButtonDesign(ogColor, colorOne, colorTwo, colorThree)
         nextRound(action: nil)
@@ -80,7 +84,6 @@ class ViewController: UIViewController
         colorsToChoose.removeAll()
     }
     
-    
     /// Game Over sequence: resets score and update highscore if necessary
     func endGame()
     {
@@ -92,6 +95,13 @@ class ViewController: UIViewController
         }
         score = 0;
     }
+    
+    @IBAction func infoTapped(_ sender: UIButton)
+    {
+        buttonInfo.isHidden = !buttonInfo.isHidden
+        scoreCount.isHidden = !scoreCount.isHidden
+    }
+    
     
     override func didReceiveMemoryWarning()
     {

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oE8-Mb-VnD">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -21,25 +21,25 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oGw-rx-tzS">
-                                <rect key="frame" x="35" y="434.66666666666663" width="90" height="89.999999999999886"/>
+                                <rect key="frame" x="31" y="414" width="79.5" height="76.5"/>
                                 <color key="backgroundColor" red="1" green="0.65327630900055145" blue="0.83610089913752428" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AgN-Q3-oED"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vcT-sD-HZj">
-                                <rect key="frame" x="165" y="434.66666666666663" width="90" height="89.999999999999886"/>
+                                <rect key="frame" x="150.5" y="414" width="80" height="76.5"/>
                                 <color key="backgroundColor" red="1" green="0.76814825063905634" blue="0.92187233299667037" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OaV-jb-zzJ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62L-7u-9Vi">
-                                <rect key="frame" x="96.666666666666686" y="124" width="221" height="220.66666666666669"/>
+                                <rect key="frame" x="87.5" y="124" width="200" height="200"/>
                                 <color key="backgroundColor" red="1" green="0.45167879214521878" blue="0.53834981057799958" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="62L-7u-9Vi" secondAttribute="height" multiplier="1:1" id="Qxn-iB-hFe"/>
@@ -49,16 +49,33 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TlX-to-YkZ">
-                                <rect key="frame" x="295" y="434.66666666666663" width="89.666666666666686" height="89.666666666666629"/>
+                                <rect key="frame" x="270.5" y="414" width="79" height="76.5"/>
                                 <color key="backgroundColor" red="1" green="0.51465046864287545" blue="0.78085591892929895" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="w06-2Z-XYJ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwe-Jn-VVT">
-                                <rect key="frame" x="176" y="653" width="62.333333333333343" height="24"/>
+                                <rect key="frame" x="156" y="584" width="63" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qNx-ZM-q1g">
+                                <rect key="frame" x="58" y="544" width="265" height="91"/>
+                                <color key="backgroundColor" red="0.63577797774869116" green="0.63577797774869116" blue="0.63577797774869116" alpha="0.41904920212765956" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="265" id="Kgp-9Z-Bcw"/>
+                                    <constraint firstAttribute="width" secondItem="qNx-ZM-q1g" secondAttribute="height" multiplier="265:91" id="doN-ZF-KDM"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Choose which one of the three mini blocks matches with the large block">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" headIndent="5" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -67,6 +84,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="gwe-Jn-VVT" secondAttribute="bottom" constant="59" id="5Uj-Gn-AnT"/>
                             <constraint firstItem="vcT-sD-HZj" firstAttribute="top" secondItem="62L-7u-9Vi" secondAttribute="bottom" constant="90" id="5yg-nO-V5Z"/>
                             <constraint firstItem="62L-7u-9Vi" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.3" id="9Cz-3v-D2A"/>
+                            <constraint firstItem="qNx-ZM-q1g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="3" id="DpH-Tn-f32"/>
                             <constraint firstItem="oGw-rx-tzS" firstAttribute="top" secondItem="62L-7u-9Vi" secondAttribute="bottom" constant="90" id="Fdq-C9-RlY"/>
                             <constraint firstItem="62L-7u-9Vi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="KBg-cI-AHb"/>
                             <constraint firstItem="vcT-sD-HZj" firstAttribute="width" secondItem="oGw-rx-tzS" secondAttribute="width" id="No0-xr-5YA"/>
@@ -75,6 +93,7 @@
                             <constraint firstItem="TlX-to-YkZ" firstAttribute="top" secondItem="62L-7u-9Vi" secondAttribute="bottom" constant="90" id="TSc-XQ-fBc"/>
                             <constraint firstItem="62L-7u-9Vi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="WJ4-CM-cyn"/>
                             <constraint firstItem="TlX-to-YkZ" firstAttribute="leading" secondItem="vcT-sD-HZj" secondAttribute="trailing" constant="40" id="fhS-Iy-cCg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qNx-ZM-q1g" secondAttribute="bottom" constant="32" id="kAf-fp-ZXL"/>
                             <constraint firstItem="TlX-to-YkZ" firstAttribute="width" secondItem="oGw-rx-tzS" secondAttribute="width" id="nuH-KV-7WT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="TlX-to-YkZ" secondAttribute="trailing" constant="9.3333333333333144" id="qMz-Qb-Qwm"/>
                             <constraint firstItem="vcT-sD-HZj" firstAttribute="leading" secondItem="oGw-rx-tzS" secondAttribute="trailing" constant="40" id="rlZ-cf-Eu8"/>
@@ -83,18 +102,26 @@
                             <constraint firstItem="oGw-rx-tzS" firstAttribute="height" secondItem="vcT-sD-HZj" secondAttribute="height" id="vnX-Mt-lln"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Q9o-Ae-K9s"/>
+                    <navigationItem key="navigationItem" id="Q9o-Ae-K9s">
+                        <barButtonItem key="rightBarButtonItem" title="Info" id="OPb-kI-9NL">
+                            <connections>
+                                <action selector="infoTapped:" destination="BYZ-38-t0r" id="6eF-4v-5w0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="buttonInfo" destination="qNx-ZM-q1g" id="Bx1-xB-uxV"/>
                         <outlet property="colorOne" destination="oGw-rx-tzS" id="bUo-cj-5Nx"/>
                         <outlet property="colorThree" destination="TlX-to-YkZ" id="usE-ig-aeC"/>
                         <outlet property="colorTwo" destination="vcT-sD-HZj" id="3Fz-kS-6QU"/>
+                        <outlet property="infoButton" destination="OPb-kI-9NL" id="QHa-79-wEv"/>
                         <outlet property="ogColor" destination="62L-7u-9Vi" id="8jW-NK-n0q"/>
                         <outlet property="scoreCount" destination="gwe-Jn-VVT" id="5Rb-3p-865"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1075.3623188405797" y="138.58695652173915"/>
+            <point key="canvasLocation" x="1074.4000000000001" y="138.0809595202399"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="lmu-8O-6wB">

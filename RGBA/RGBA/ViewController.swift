@@ -96,6 +96,9 @@ class ViewController: UIViewController
         score = 0;
     }
     
+    /// Action when info button is tapped
+    /// Hides the scoreCount label and reveals the how to play infomation
+    /// - Parameter sender: <#sender description#>
     @IBAction func infoTapped(_ sender: UIButton)
     {
         buttonInfo.isHidden = !buttonInfo.isHidden

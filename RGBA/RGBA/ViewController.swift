@@ -76,9 +76,6 @@ class ViewController: UIViewController
         else
         {
             title = ""
-            let ac = UIAlertController(title: "Game Over", message: "Your score was \(score)", preferredStyle: .alert)
-            ac.addAction(UIAlertAction(title: "Play Again", style: .default, handler: nextRound))
-            present(ac, animated: true)
             endGame()
         }
         colorsToChoose.removeAll()
@@ -87,13 +84,11 @@ class ViewController: UIViewController
     /// Game Over sequence: resets score and update highscore if necessary
     func endGame()
     {
-        let defaults = UserDefaults.standard
-        let highScore = defaults.integer(forKey: "highScore")
-        if score > highScore
-        {
-            defaults.set(self.score, forKey: "highScore")
-        }
-        score = 0;
+        performSegue(withIdentifier: "gameOver", sender: self)
+        colorsToChoose.removeAll()
+        nextRound(action: nil)
+        score = 0
+
     }
     
     /// Action when info button is tapped
@@ -105,6 +100,21 @@ class ViewController: UIViewController
         scoreCount.isHidden = !scoreCount.isHidden
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        let s = score
+        let defaults = UserDefaults.standard
+        let highScore = defaults.integer(forKey: "highScore")
+        if s > highScore
+        {
+            defaults.set(self.score, forKey: "highScore")
+        }
+        if let gameOverController = segue.destination as? ViewController2
+        {
+            gameOverController.highScore = highScore
+            gameOverController.score = s
+        }
+    }
     
     override func didReceiveMemoryWarning()
     {

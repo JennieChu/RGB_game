@@ -16,6 +16,7 @@
 		B31D39AF1E15E24A0046546E /* RGBAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31D39AE1E15E24A0046546E /* RGBAUITests.swift */; };
 		B31D39BD1E174ABB0046546E /* UIColor+getSimilarColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31D39BC1E174ABB0046546E /* UIColor+getSimilarColor.swift */; };
 		B31D39BF1E184E270046546E /* helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31D39BE1E184E270046546E /* helper.swift */; };
+		B3FC5A6B1E1C7E08001BB8AD /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FC5A6A1E1C7E08001BB8AD /* ViewController2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		B31D39B01E15E24A0046546E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B31D39BC1E174ABB0046546E /* UIColor+getSimilarColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+getSimilarColor.swift"; sourceTree = "<group>"; };
 		B31D39BE1E184E270046546E /* helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = helper.swift; sourceTree = "<group>"; };
+		B3FC5A6A1E1C7E08001BB8AD /* ViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			children = (
 				B31D398E1E15E24A0046546E /* AppDelegate.swift */,
 				B31D39901E15E24A0046546E /* ViewController.swift */,
+				B3FC5A6A1E1C7E08001BB8AD /* ViewController2.swift */,
 				B31D39BE1E184E270046546E /* helper.swift */,
 				B31D39BC1E174ABB0046546E /* UIColor+getSimilarColor.swift */,
 				B31D39921E15E24A0046546E /* Main.storyboard */,
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3FC5A6B1E1C7E08001BB8AD /* ViewController2.swift in Sources */,
 				B31D39911E15E24A0046546E /* ViewController.swift in Sources */,
 				B31D39BD1E174ABB0046546E /* UIColor+getSimilarColor.swift in Sources */,
 				B31D398F1E15E24A0046546E /* AppDelegate.swift in Sources */,
@@ -513,6 +517,7 @@
 				B31D39B51E15E24A0046546E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B31D39B61E15E24A0046546E /* Build configuration list for PBXNativeTarget "RGBATests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +526,7 @@
 				B31D39B81E15E24A0046546E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B31D39B91E15E24A0046546E /* Build configuration list for PBXNativeTarget "RGBAUITests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +535,7 @@
 				B31D39BB1E15E24A0046546E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -12,12 +12,14 @@ class ViewController2: UIViewController {
     
     var highScore: Int?
     var score: Int?
-
+    @IBOutlet weak var yourScore: UILabel!
+    @IBOutlet weak var endHighScore: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        print(highScore!)
-        print(score!)
+        yourScore.text = "Your Score: \(score!)"
+        endHighScore.text = "High Score: \(highScore!)"
     }
 
     override func didReceiveMemoryWarning() {

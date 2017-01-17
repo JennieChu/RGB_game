@@ -29,33 +29,33 @@ extension UIColor
         {
             if fRed > 0.5
             {
-                fRed -= 0.03
+                fRed -= 0.04
             }
             else
             {
-                fRed += 0.03
+                fRed += 0.04
             }
         }
         else if rnum == 1
         {
             if fGreen > 0.5
             {
-                fGreen -= 0.03
+                fGreen -= 0.04
             }
             else
             {
-                fGreen += 0.03
+                fGreen += 0.04
             }
         }
         else
         {
             if fBlue > 0.05
             {
-                fBlue -= 0.03
+                fBlue -= 0.04
             }
             else
             {
-                fBlue += 0.03
+                fBlue += 0.04
             }
         }
         // print("After change: fRed is \(fRed), fGreen is \(fGreen), fBlue is \(fBlue)")
